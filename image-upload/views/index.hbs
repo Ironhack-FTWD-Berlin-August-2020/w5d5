@@ -1,0 +1,17 @@
+<h1>Movies</h1>
+<div class="movies-wrapper">
+  {{#if movies}}
+    {{#each movies}}
+    <div class="movie-item">
+      <h4>{{this.title}}</h4>
+      <p>{{this.description}}</p>
+      <img src="{{this.imgPath}}" alt="poster for {{this.title}}">
+      <a href="/movie/delete/{{this._id}}">❌</a>
+    </div>
+    {{/each}}
+  {{else}}
+  <h3>No Movies yet 🤷‍♀️🤷‍ ️</h3>
+  {{/if}}
+</div>
+
+<a href="/movie/add">Add a movie</a>
